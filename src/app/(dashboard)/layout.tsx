@@ -8,7 +8,7 @@ import MainContent from "@/ui/MainContent"
 import IconButton from "@/ui/IconButton"
 
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
-import { FaMoon, FaInbox, FaTrash} from "react-icons/fa";
+import { FaMoon, FaInbox, FaTrash } from "react-icons/fa";
 import { IoMdSettings, IoMdAdd } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
 
@@ -56,27 +56,13 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
                         </Sidebar.Menu>
                     </Sidebar.Group>
 
-                    <Sidebar.Group id="favorite">
-                        <Sidebar.Heading>Favorites</Sidebar.Heading>
-                    </Sidebar.Group>
-
-                    <Sidebar.Group id="teamspace">
-                        <Sidebar.Heading>Teamspace</Sidebar.Heading>
-                        <Sidebar.Menu href="/teamspace/create">
+                    <Sidebar.Group id="workspace">
+                        <Sidebar.Heading>Workspace</Sidebar.Heading>
+                        <Sidebar.Menu href="/workspace/create">
                             <Sidebar.MenuIcon>
                                 <IoMdAdd className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>New</Sidebar.MenuLabel>
-                        </Sidebar.Menu>
-                    </Sidebar.Group>
-
-                    <Sidebar.Group id="private">
-                        <Sidebar.Heading>Private</Sidebar.Heading>
-                        <Sidebar.Menu href="/private/create">
-                            <Sidebar.MenuIcon>
-                                <IoMdAdd className="w-4 h-4" />
-                            </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>New</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Workspace</Sidebar.MenuLabel>
                         </Sidebar.Menu>
                     </Sidebar.Group>
                 </Sidebar>
