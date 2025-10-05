@@ -6,12 +6,14 @@ import Sidebar from "@/ui/Sidebar"
 import Main from "@/ui/Main"
 import MainContent from "@/ui/MainContent"
 import IconButton from "@/ui/IconButton"
-import SearchField from "@/ui/SearchField"
+
+import SearchBar from "@/custom/SearchBar"
 
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
-import { FaMoon, FaUser, FaUsers, FaStickyNote } from "react-icons/fa";
-import { IoMdSettings } from "react-icons/io";
+import { FaUser, FaUsers, FaStickyNote } from "react-icons/fa";
+import { IoMdAdd, IoMdSettings } from "react-icons/io";
 import { MdCategory } from "react-icons/md"
+import { IoLogOut } from "react-icons/io5"
 
 export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
     const [showSidebar, setShowSidebar] = useState<boolean>(false)
@@ -25,15 +27,13 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
                         {showSidebar ? <GoSidebarExpand className="w-6 h-6" /> : <GoSidebarCollapse className="w-6 h-6" />}
                     </IconButton>
                 </Navbar.Group>
-                <div className="w-full px-2">
-                    <SearchField />
-                </div>
+                <SearchBar />
                 <Navbar.Group id="nav-right">
-                    <IconButton>
-                        <FaMoon className="w-4 h-4" />
+                    <IconButton onClick={()=> {window.location.href = "/create"}}>
+                        <IoMdAdd className="w-5 h-5" />
                     </IconButton>
                     <IconButton>
-                        <IoMdSettings className="w-5 h-5" />
+                        <IoLogOut className="w-5 h-5" />
                     </IconButton>
                 </Navbar.Group>
             </Navbar>

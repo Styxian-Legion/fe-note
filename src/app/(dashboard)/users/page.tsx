@@ -8,24 +8,14 @@ import Select from "@/ui/Select"
 
 export default function Page() {
     return (
-        <div className="w-full flex flex-col gap-4">
-            <div className="w-full flex flex-col gap-2">
-                <Item id="1" fullName="Lorem" role="administrator" />
-                <Item id="1" fullName="Lorem" role="administrator" />
-                <Item id="1" fullName="Lorem" role="administrator" />
-                <Item id="1" fullName="Lorem" role="administrator" />
-                <Item id="1" fullName="Lorem" role="administrator" />
-                <Item id="1" fullName="Lorem" role="administrator" />
-                <Item id="1" fullName="Lorem" role="administrator" />
-            </div>
-            <div className="flex items-center justify-center gap-4">
-                <button className="w-32 h-10 border border-slate-400 flex items-center justify-center">
-                    Prev
-                </button>
-                <button className="w-32 h-10 border border-slate-400 flex items-center justify-center">
-                    Next
-                </button>
-            </div>
+        <div className="w-full flex flex-col gap-2">
+            <Item id="1" fullName="Lorem" role="administrator" />
+            <Item id="1" fullName="Lorem" role="administrator" />
+            <Item id="1" fullName="Lorem" role="administrator" />
+            <Item id="1" fullName="Lorem" role="administrator" />
+            <Item id="1" fullName="Lorem" role="administrator" />
+            <Item id="1" fullName="Lorem" role="administrator" />
+            <Item id="1" fullName="Lorem" role="administrator" />
         </div>
     )
 }
@@ -40,7 +30,7 @@ const Item = ({ id, fullName, role }: { id: string, fullName: string, role: stri
     const handleUpdateRole = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         try {
-            
+
         } catch (error) {
             console.error(error)
         }
@@ -49,7 +39,7 @@ const Item = ({ id, fullName, role }: { id: string, fullName: string, role: stri
     const handleDelete = (e: React.MouseEvent) => {
         e.preventDefault()
         try {
-            
+
         } catch (error) {
             console.error(error)
         }
