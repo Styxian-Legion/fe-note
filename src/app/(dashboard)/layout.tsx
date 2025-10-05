@@ -11,7 +11,7 @@ import SearchField from "@/ui/SearchField"
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import { FaMoon, FaUser, FaUsers, FaStickyNote } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
-import { IoHome } from "react-icons/io5";
+import { MdCategory } from "react-icons/md"
 
 export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
     const [showSidebar, setShowSidebar] = useState<boolean>(false)
@@ -40,11 +40,11 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
             <Main>
                 <Sidebar className={`${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
                     <Sidebar.Group id="master">
-                        <Sidebar.Menu href="/home">
+                        <Sidebar.Menu href="/category">
                             <Sidebar.MenuIcon>
-                                <IoHome className="w-4 h-4" />
+                                <MdCategory  className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Home</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Category</Sidebar.MenuLabel>
                         </Sidebar.Menu>
                         <Sidebar.Menu href="/wiki">
                             <Sidebar.MenuIcon>
