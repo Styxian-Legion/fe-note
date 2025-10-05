@@ -1,1 +1,87 @@
 @import "tailwindcss";
+
+.mdx-editor-wrapper h1 {
+    font-size: 2.5rem;
+    /* Heading 1 */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.mdx-editor-wrapper h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.9rem;
+}
+
+.mdx-editor-wrapper h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.mdx-editor-wrapper h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+.mdx-editor-wrapper h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.mdx-editor-wrapper h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Blockquote (Quote) */
+.mdx-editor-wrapper blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 1rem;
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+    background-color: #f9f9f9;
+}
+
+/* List bullet (unordered list) */
+.mdx-editor-wrapper ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* List numbered (ordered list) */
+.mdx-editor-wrapper ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Checklist (task list) */
+/* Checklist items usually rendered as list items with input checkbox */
+
+.mdx-editor-wrapper li.task-list-item {
+    list-style: none;
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.mdx-editor-wrapper li.task-list-item input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Optional: strike-through for checked items */
+.mdx-editor-wrapper li.task-list-item input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    color: #888;
+}

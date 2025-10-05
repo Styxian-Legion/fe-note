@@ -6,10 +6,11 @@ import Sidebar from "@/ui/Sidebar"
 import Main from "@/ui/Main"
 import MainContent from "@/ui/MainContent"
 import IconButton from "@/ui/IconButton"
+import SearchField from "@/ui/SearchField"
 
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
-import { FaMoon, FaInbox, FaTrash } from "react-icons/fa";
-import { IoMdSettings, IoMdAdd } from "react-icons/io";
+import { FaMoon, FaUser, FaUsers, FaStickyNote } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
 
 export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
@@ -24,6 +25,9 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
                         {showSidebar ? <GoSidebarExpand className="w-6 h-6" /> : <GoSidebarCollapse className="w-6 h-6" />}
                     </IconButton>
                 </Navbar.Group>
+                <div className="w-full px-2">
+                    <SearchField />
+                </div>
                 <Navbar.Group id="nav-right">
                     <IconButton>
                         <FaMoon className="w-4 h-4" />
@@ -42,27 +46,26 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
                             </Sidebar.MenuIcon>
                             <Sidebar.MenuLabel>Home</Sidebar.MenuLabel>
                         </Sidebar.Menu>
-                        <Sidebar.Menu href="/inbox">
+                        <Sidebar.Menu href="/wiki">
                             <Sidebar.MenuIcon>
-                                <FaInbox className="w-4 h-4" />
+                                <FaStickyNote className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Inbox</Sidebar.MenuLabel>
-                        </Sidebar.Menu>
-                        <Sidebar.Menu href="/trash">
-                            <Sidebar.MenuIcon>
-                                <FaTrash className="w-4 h-4" />
-                            </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Trash</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Wiki</Sidebar.MenuLabel>
                         </Sidebar.Menu>
                     </Sidebar.Group>
-
-                    <Sidebar.Group id="workspace">
-                        <Sidebar.Heading>Workspace</Sidebar.Heading>
-                        <Sidebar.Menu href="/workspace/create">
+                    <Sidebar.Group id="account">
+                        <Sidebar.Heading>Others</Sidebar.Heading>
+                        <Sidebar.Menu href="/account">
                             <Sidebar.MenuIcon>
-                                <IoMdAdd className="w-4 h-4" />
+                                <FaUser className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Workspace</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Account Settings</Sidebar.MenuLabel>
+                        </Sidebar.Menu>
+                        <Sidebar.Menu href="/account">
+                            <Sidebar.MenuIcon>
+                                <FaUsers className="w-4 h-4" />
+                            </Sidebar.MenuIcon>
+                            <Sidebar.MenuLabel>Users</Sidebar.MenuLabel>
                         </Sidebar.Menu>
                     </Sidebar.Group>
                 </Sidebar>
