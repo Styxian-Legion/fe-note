@@ -59,9 +59,9 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
                             <Sidebar.MenuIcon>
                                 <FaUser className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Account Settings</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Account</Sidebar.MenuLabel>
                         </Sidebar.Menu>
-                        <Sidebar.Menu href="/account">
+                        <Sidebar.Menu href="/users">
                             <Sidebar.MenuIcon>
                                 <FaUsers className="w-4 h-4" />
                             </Sidebar.MenuIcon>
