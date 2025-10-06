@@ -16,7 +16,7 @@ const Item = ({direction, children}: Readonly<{direction: "row" | "column", chil
 
 const Message = ({isError, children}: Readonly<{isError: boolean, children: React.ReactNode}>) => {
     return (
-        <div className={`w-full h-12 px-3 flex items-center ${isError ? "bg-red-100 text-red-600" : "bg-green-100 text-green-600"}`}>
+        <div className={`w-full h-12 px-3 rounded-md flex items-center ${isError ? "bg-red-100 text-red-600" : "bg-green-100 text-green-600"}`}>
             {children}
         </div>
     )

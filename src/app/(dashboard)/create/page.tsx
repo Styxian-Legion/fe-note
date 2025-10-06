@@ -52,7 +52,7 @@ export default function Page() {
                         <Label htmlFor="content">Content</Label>
                         <MardownEditor markdown={data.content} onChange={(e) => setData({ ...data, content: e })}  />
                     </Form.Item>
-                    <Button className="bg-black text-white">Save</Button>
+                    <Button type="submit" className="bg-black text-white">Save</Button>
                 </Form>
             </form>
         </>

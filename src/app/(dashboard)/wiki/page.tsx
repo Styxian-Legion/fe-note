@@ -28,7 +28,7 @@ export default function Page() {
 
 const Item = ({ id, title, updatedAt, content }: Readonly<{ id: string, title: string, updatedAt: string, content: string }>) => {
     return (
-        <div className="w-full py-2 border-b border-slate-200 flex flex-col gap-2">
+        <div className="w-full py-2 px-1.5 border-b border-slate-200 hover:bg-slate-100 flex flex-col gap-2">
             <Link href={`/wiki/${id}`} className="flex items-center gap-2">
                 <FaStickyNote className="w-6 h-6 text-slate-500" />
                 <div>

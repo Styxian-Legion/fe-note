@@ -78,18 +78,18 @@ const CategoryItem = ({ id, category }: { id: string, category: string }) => {
     return (
         <>
             {editMode == true && (
-                <form onSubmit={onUpdate} className="w-full h-12 px-2 flex justify-between gap-2 items-center border border-slate-200">
+                <form onSubmit={onUpdate} className="w-full h-12 px-2 flex justify-between gap-2 items-center border rounded-md border-slate-200">
                     <div className="w-full flex items-center gap-2">
-                        <div className="w-8 h-8 border border-slate-400 flex items-center justify-center">
+                        <div className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center">
                             1
                         </div>
-                        <input type="text" className="w-full h-8 px-2 outline-none border border-slate-400" />
+                        <input type="text" className="w-full h-8 px-2 outline-none border rounded-md border-slate-400" />
                     </div>
                     <div className="flex items-center gap-2">
-                        <button type="submit" className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button type="submit" className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <IoCheckmark className="w-5 h-5" />
                         </button>
-                        <button onClick={handleEditMode} className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={handleEditMode} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <IoMdClose className="w-5 h-5" />
                         </button>
                     </div>
@@ -99,19 +99,19 @@ const CategoryItem = ({ id, category }: { id: string, category: string }) => {
             {editMode == false && (
                 <div className="w-full h-12 px-2 flex justify-between items-center border border-slate-200">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 border border-slate-400 flex items-center justify-center">
+                        <div className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center">
                             1
                         </div>
                         <h1 className="font-medium">Lorem, ipsum dolor.</h1>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Link href={`/category/${data.id}`} className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <Link href={`/category/${data.id}`} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <FaExternalLinkAlt className="w-5 h-5" />
                         </Link>
-                        <button onClick={handleEditMode} className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={handleEditMode} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <FiEdit className="w-5 h-5" />
                         </button>
-                        <button onClick={onDelete} className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={onDelete} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <FaTrash className="w-5 h-5" />
                         </button>
                     </div>

@@ -21,7 +21,7 @@ interface MardownEditor extends React.ComponentProps<typeof MDXEditor> {
 
 export default function MardownEditor({readOnly, ...props}: MardownEditor) {
     return (
-        <div className="mdx-editor-wrapper border border-slate-200">
+        <div className="mdx-editor-wrapper border rounded-md border-slate-200">
             <MDXEditor
                 plugins={[
                     markdownShortcutPlugin(),
