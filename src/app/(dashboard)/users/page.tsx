@@ -48,17 +48,16 @@ const Item = ({ id, fullName, role }: { id: string, fullName: string, role: stri
     return (
         <>
             {editMode == false && (
-                <div className="w-full h-14 px-2 flex justify-between items-center border border-slate-200">
-                    <div className="flex items-center gap-4">
+                <div className="w-full h-16 px-2 flex justify-between items-center border rounded-md border-slate-200">
+                    <div className="flex flex-col">
                         <h1 className="font-semibold">{fullName}</h1>
-                        <span>|</span>
-                        <h2 className="text-md py-0.5 px-1 bg-black text-white rounded-sm">{role}</h2>
+                        <h2 className="text-md rounded-sm">{role}</h2>
                     </div>
                     <div className="flex items-center gap-2">
-                        <button onClick={handleEditMode} className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={handleEditMode} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <FaUserShield className="w-5 h-5" />
                         </button>
-                        <button onClick={handleDelete} className="w-8 h-8 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={handleDelete} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <FaTrash className="w-5 h-5" />
                         </button>
                     </div>
@@ -66,17 +65,17 @@ const Item = ({ id, fullName, role }: { id: string, fullName: string, role: stri
             )}
 
             {editMode == true && (
-                <form onSubmit={handleUpdateRole} className="w-full h-14 px-2 flex justify-between items-center gap-2 border border-slate-200">
+                <form onSubmit={handleUpdateRole} className="w-full h-14 px-2 flex justify-between items-center gap-2 border rounded-md border-slate-200">
                     <Select value={formData.role} onChange={(e) => setFormData({ ...formData, role: e.target.value })} >
                         <Select.Option value="administrator">Administrator</Select.Option>
                         <Select.Option value="contributor">Contributor</Select.Option>
                         <Select.Option value="user">User</Select.Option>
                     </Select>
                     <div className="flex items-center gap-2">
-                        <button onClick={handleEditMode} className="w-10 h-10 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={handleEditMode} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <IoMdClose className="w-5 h-5" />
                         </button>
-                        <button onClick={handleDelete} className="w-10 h-10 border border-slate-400 flex items-center justify-center hover:cursor-pointer">
+                        <button onClick={handleDelete} className="w-8 h-8 border rounded-md border-slate-400 flex items-center justify-center hover:cursor-pointer">
                             <FaCheck className="w-5 h-5" />
                         </button>
                     </div>

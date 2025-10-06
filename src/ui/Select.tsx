@@ -7,7 +7,7 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 export default function Select({ children, ...props }: SelectProps) {
     return (
         <select
-            className="w-full h-10 px-2 border border-slate-300 outline-none focus:border-slate-400 duration-200"
+            className="w-full h-10 px-2 border rounded-md border-slate-300 outline-none focus:border-slate-400 duration-200"
             {...props}
         >
             {children}
