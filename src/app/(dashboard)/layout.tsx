@@ -7,12 +7,12 @@ import Main from "@/ui/Main"
 import MainContent from "@/ui/MainContent"
 import IconButton from "@/ui/IconButton"
 
-import SearchBar from "@/custom/SearchBar"
+import SearchBar from "@/components/SearchBar"
 
 import { GoSidebarCollapse, GoSidebarExpand } from "react-icons/go";
 import { FaUser, FaUsers, FaStickyNote } from "react-icons/fa";
-import { IoMdAdd, IoMdSettings } from "react-icons/io";
-import { MdCategory } from "react-icons/md"
+import { IoMdAdd } from "react-icons/io";
+import { MdCategory, MdDashboard } from "react-icons/md"
 import { IoLogOut } from "react-icons/io5"
 
 export default function Layout({ children }: Readonly<{ children: React.ReactNode; }>) {
@@ -29,7 +29,7 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
                 </Navbar.Group>
                 <SearchBar />
                 <Navbar.Group id="nav-right">
-                    <IconButton onClick={()=> {window.location.href = "/create"}}>
+                    <IconButton onClick={() => { window.location.href = "/create" }}>
                         <IoMdAdd className="w-5 h-5" />
                     </IconButton>
                     <IconButton>
@@ -40,17 +40,23 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
             <Main>
                 <Sidebar className={`${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
                     <Sidebar.Group id="master">
+                        <Sidebar.Menu href="/dashboard">
+                            <Sidebar.MenuIcon>
+                                <MdDashboard className="w-4 h-4" />
+                            </Sidebar.MenuIcon>
+                            <Sidebar.MenuLabel>Dashboard</Sidebar.MenuLabel>
+                        </Sidebar.Menu>
                         <Sidebar.Menu href="/category">
                             <Sidebar.MenuIcon>
-                                <MdCategory  className="w-4 h-4" />
+                                <MdCategory className="w-4 h-4" />
                             </Sidebar.MenuIcon>
                             <Sidebar.MenuLabel>Category</Sidebar.MenuLabel>
                         </Sidebar.Menu>
-                        <Sidebar.Menu href="/wiki">
+                        <Sidebar.Menu href="/notes">
                             <Sidebar.MenuIcon>
                                 <FaStickyNote className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Wiki</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Notes</Sidebar.MenuLabel>
                         </Sidebar.Menu>
                     </Sidebar.Group>
                     <Sidebar.Group id="account">

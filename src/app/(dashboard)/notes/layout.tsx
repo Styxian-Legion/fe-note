@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Workspace",
+    title: "Notes",
 }
 
 export default function Layout({children}: Readonly<{children: React.ReactNode;}>) {

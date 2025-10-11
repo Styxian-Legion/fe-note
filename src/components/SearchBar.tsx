@@ -7,12 +7,12 @@ export default function SearchBar() {
     
     return (
         <div className="w-full px-2">
-            {pathname.startsWith("/wiki/") && (
+            {pathname.startsWith("/notes") && (
                 <form action="">
-                    <SearchField placeholder="Search wiki" />
+                    <SearchField placeholder="Search note" />
                 </form>
             )}
-            {pathname.startsWith("/users/") && (
+            {pathname.startsWith("/users") && (
                 <form action="">
                     <SearchField placeholder="Search user" />
                 </form>

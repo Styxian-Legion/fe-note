@@ -7,7 +7,7 @@ import MarkdownRender from "@/ui/MarkdownRender";
 
 export default function Page() {
     const params = useParams()
-    const id = params.id
+    const slug = params.slug
 
     const [data, setData] = useState<{
         title: string
@@ -31,12 +31,12 @@ export default function Page() {
             <div className="w-full h-9 border-b flex justify-between items-center text-sm font-medium text-blue-500">
                 <div className="flex items-center gap-1.5">
                     <span className="mr-2">Category :</span>
-                    <Link href={`/wiki/category/${data.category}`}>{data.category}</Link>
+                    <Link href={`/notes/category/${data.category}`}>{data.category}</Link>
                 </div>
                 <div className="flex items-center gap-2.5">
-                    <Link href={`/wiki/${id}`} className="underline underline-offset-4 text-black">Read</Link>
-                    <Link href={`/wiki/${id}/edit`} className="hover:underline hover:underline-offset-4">Edit</Link>
-                    <Link href={`/wiki/${id}/delete`} className="hover:underline hover:underline-offset-4">Delete</Link>
+                    <Link href={`/notes/${slug}`} className="underline underline-offset-4 text-black">Read</Link>
+                    <Link href={`/notes/${slug}/edit`} className="hover:underline hover:underline-offset-4">Edit</Link>
+                    <Link href={`/notes/${slug}/delete`} className="hover:underline hover:underline-offset-4">Delete</Link>
                 </div>
             </div>
             <div className="w-full py-4">
