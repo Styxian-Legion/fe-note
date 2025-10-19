@@ -12,13 +12,13 @@ export default function Page() {
     const [data, setData] = useState<{
         title: string
         slug: string
-        category: string
+        label: string
         content: string
         updatedAt: string
     }>({
         title: "Lorem ipsum dolor sit amet consectetur.",
         slug: "lorem-ipsum-dolor-sit-amet-consectetur",
-        category: "lorem",
+        label: "lorem",
         content: "lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
         updatedAt: "2026-01-01T00:00:00.000Z"
     })
@@ -30,8 +30,8 @@ export default function Page() {
             </div>
             <div className="w-full h-9 border-b flex justify-between items-center text-sm font-medium text-blue-500">
                 <div className="flex items-center gap-1.5">
-                    <span className="mr-2">Category :</span>
-                    <Link href={`/wiki/category/${data.category}`}>{data.category}</Link>
+                    <span className="mr-2">Label :</span>
+                    <Link href={`/wiki/label/${data.label}`}>{data.label}</Link>
                 </div>
                 <div className="flex items-center gap-2.5">
                     <Link href={`/wiki/${id}`} className="underline underline-offset-4 text-black">Read</Link>

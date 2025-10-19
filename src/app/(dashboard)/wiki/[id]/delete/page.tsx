@@ -16,14 +16,14 @@ export default function Page() {
     const [data, setData] = useState<{
         title: string
         slug: string
-        category: string
+        label: string
         content: string
         updatedAt: string
         confirmDelete: string
     }>({
         title: "",
         slug: "",
-        category: "",
+        label: "",
         content: "",
         updatedAt: "",
         confirmDelete: ""
@@ -45,8 +45,8 @@ export default function Page() {
             </div>
             <div className="w-full h-9 border-b flex justify-between items-center text-sm font-medium text-blue-500">
                 <div className="flex items-center gap-1.5">
-                    <span className="mr-2">Category :</span>
-                    <Link href={`/wiki/category/${data.category}`}>{data.category}</Link>
+                    <span className="mr-2">Label :</span>
+                    <Link href={`/wiki/labely/${data.label}`}>{data.label}</Link>
                 </div>
                 <div className="flex items-center gap-2.5">
                     <Link href={`/wiki/${id}`} className="hover:underline hover:underline-offset-4">Read</Link>

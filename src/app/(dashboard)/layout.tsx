@@ -40,11 +40,11 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
             <Main>
                 <Sidebar className={`${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
                     <Sidebar.Group id="master">
-                        <Sidebar.Menu href="/category">
+                        <Sidebar.Menu href="/label">
                             <Sidebar.MenuIcon>
                                 <MdCategory  className="w-4 h-4" />
                             </Sidebar.MenuIcon>
-                            <Sidebar.MenuLabel>Category</Sidebar.MenuLabel>
+                            <Sidebar.MenuLabel>Label</Sidebar.MenuLabel>
                         </Sidebar.Menu>
                         <Sidebar.Menu href="/wiki">
                             <Sidebar.MenuIcon>

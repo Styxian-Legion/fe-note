@@ -13,13 +13,13 @@ export default function Page() {
     const [data, setData] = useState<{
         title: string
         slug: string
-        category: string
+        label: string
         content: string
         updatedAt: string
     }>({
         title: "",
         slug: "",
-        category: "",
+        label: "",
         content: "",
         updatedAt: ""
     })
@@ -42,8 +42,8 @@ export default function Page() {
                         <TextField id="title" value={data.title} onChange={(e) => setData({ ...data, title: e.target.value })} />
                     </Form.Item>
                     <Form.Item direction="column">
-                        <Label htmlFor="category">Category</Label>
-                        <Select value={data.category} onChange={(e) => setData({ ...data, category: e.target.value })}>
+                        <Label htmlFor="label">Label</Label>
+                        <Select value={data.label} onChange={(e) => setData({ ...data, label: e.target.value })}>
                             <Select.Option value="1">Lorem</Select.Option>
                             <Select.Option value="2">Ipsum</Select.Option>
                         </Select>

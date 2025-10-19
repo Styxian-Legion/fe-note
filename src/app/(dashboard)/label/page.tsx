@@ -13,12 +13,12 @@ import { IoCheckmark } from "react-icons/io5";
 
 export default function Page() {
 
-    const [category, setCategory] = useState<string>("")
+    const [label, setLabel] = useState<string>("")
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         try {
-            console.log(category)
+            console.log(label)
         } catch (error) {
             console.error(error)
         }
@@ -29,28 +29,28 @@ export default function Page() {
             <form onSubmit={handleSubmit} className="w-full py-4">
                 <Form>
                     <Form.Item direction="column">
-                        <Label htmlFor="category">Category</Label>
-                        <TextField id="category" value={category} onChange={(e) => setCategory(e.target.value)} />
+                        <Label htmlFor="label">Label</Label>
+                        <TextField id="label" value={label} onChange={(e) => setLabel(e.target.value)} />
                     </Form.Item>
                     <Button fullWidth className="bg-black text-white">Add</Button>
                 </Form>
             </form>
             <div className="w-full py-4 flex flex-col gap-4">
-                <CategoryItem id="1" category="Lorem" />
+                <LabelItem id="1" label="Lorem" />
             </div>
         </>
     )
 }
 
-const CategoryItem = ({ id, category }: { id: string, category: string }) => {
+const LabelItem = ({ id, label }: { id: string, label: string }) => {
 
     const [editMode, setEditMode] = useState<boolean>(false)
     const [data, setData] = useState<{
         id: string
-        category: string
+        label: string
     }>({
         id: id,
-        category: category
+        label: label
     })
 
     const handleEditMode = () => {
